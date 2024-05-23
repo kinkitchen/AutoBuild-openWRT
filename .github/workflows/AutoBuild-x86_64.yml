@@ -193,6 +193,18 @@ jobs:
         git clone -b $REPO_BRANCH $REPO_URL openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         cd openwrt
+        echo "src-git ssrp https://github.com/fw876/helloworld.git" >> ./feeds.conf.default
+        
+    - name: Import external feeds - eqosplus
+      working-directory: ./openwrt
+      run: |
+        git clone https://github.com/sirpdboy/luci-app-eqosplus package/luci-app-eqosplus
+    
+    - name: Import external feeds - partexp
+      working-directory: ./openwrt
+      run: |
+        git clone git clone https://github.com/sirpdboy/luci-app-partexp.git package/luci-app-partexp
+        
         ./scripts/feeds update -a
         ./scripts/feeds install -a
 
