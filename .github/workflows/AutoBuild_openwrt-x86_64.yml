@@ -201,6 +201,11 @@ jobs:
       run: |
         git clone https://github.com/sirpdboy/luci-app-eqosplus package/luci-app-eqosplus
         ./scripts/feeds update -a 
+    
+    - name: A turboacc package for official OpenWrt
+      working-directory: ./openwrt
+      run: |
+        curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
 
     - name: update golang 
       working-directory: ./openwrt
@@ -212,6 +217,7 @@ jobs:
       working-directory: ./openwrt
       run: |
         ./scripts/feeds update -a
+        ./scripts/feeds install -a
         ./scripts/feeds install -a
 
     - name: Accelerate
