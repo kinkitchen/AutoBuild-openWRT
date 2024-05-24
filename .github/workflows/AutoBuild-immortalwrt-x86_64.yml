@@ -202,6 +202,7 @@ jobs:
       working-directory: ./openwrt
       run: |
         git clone https://github.com/sirpdboy/luci-app-eqosplus package/luci-app-eqosplus
+        cd /home/runner/work/AutoBuild-Actions-Template/AutoBuild-Actions-Template/openwrt/
         curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
         
     - name: Delete duplicate files
