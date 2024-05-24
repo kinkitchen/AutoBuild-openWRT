@@ -227,7 +227,6 @@ jobs:
     - name: Update & Install feeds
       working-directory: ./openwrt
       run: |
-        ./scripts/feeds update -a
         ./scripts/feeds install -a
 
     - name: Accelerate
