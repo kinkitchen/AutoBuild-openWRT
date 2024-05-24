@@ -1,14 +1,8 @@
-# OpenWrt-Actions & One-key AutoUpdate
-
-AutoBuild-Actions 仓库地址: [AutoBuild-Actions-BETA](https://github.com/Hyy2001X/AutoBuild-Actions-BETA)
-
-自用修改版软件包地址: [AutoBuild-Packages](https://github.com/Hyy2001X/AutoBuild-Packages)
+感谢Hyy2001X的源码！全部贡献来自各位大佬！！！
 
 支持的 OpenWrt 源码: `coolsnowwolf/lede`、`immortalwrt/immortalwrt`、`openwrt/openwrt`、`lienol/openwrt`
 
-🔔 **为了你的账号安全, 请不要使用 SSH 连接 Github Action**, `.config`配置以及固件定制等操作请务必在本地完成 🔔
-
-🎈 **提示**: 文档中的 **TARGET_PROFILE** 为编译的设备名称(代号), 例如: `d-team_newifi-d2`、`asus_rt-acrh17`、`x86_64`
+**提示**: 文档中的 **TARGET_PROFILE** 为编译的设备名称(代号), 例如: `d-team_newifi-d2`、`asus_rt-acrh17`、`x86_64`
    
 **TARGET_PROFILE** 本地获取方法如下:
    
