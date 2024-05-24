@@ -224,7 +224,7 @@ jobs:
       if: env.CACHE_ACCELERATE == 'true'
       uses: klever1988/cachewrtbuild@main
       with:
-        ccache: false
+        ccache: true
         toolchain: true
         skip: true
         clean: true
