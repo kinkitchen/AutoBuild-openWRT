@@ -200,7 +200,15 @@ jobs:
       working-directory: ./openwrt
       run: |
         git clone https://github.com/sirpdboy/luci-app-eqosplus package/luci-app-eqosplus
-        ./scripts/feeds update -a 
+        
+    - name: A turboacc package for official OpenWrt
+      working-directory: ./openwrt
+      run: |
+        curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
+        
+    - name: Delete duplicate files
+      working-directory: ./openwrt
+      run: |
         rm -rf feeds/luci/applications/luci-app-mosdns && rm -rf feeds/packages/net/{alist,adguardhome,mosdns,smartdns}
 
     - name: update golang 
