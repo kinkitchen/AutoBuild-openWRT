@@ -206,6 +206,7 @@ jobs:
     - name: turboacc package for official OpenWrt
       working-directory: ./openwrt
       run: |
+        cd openwrt
         curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
         
     - name: Delete duplicate files
