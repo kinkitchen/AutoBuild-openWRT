@@ -26,10 +26,10 @@ on:
     inputs:
       Tempoary_CONFIG:
         description: '配置文件'
-        default: 'x86_64'
+        default: 'x86_64_k5.4'
         type: choice
         options:
-          - 'x86_64'
+          - 'x86_64_k5.4'
       Tempoary_FLAG:
         description: '固件标签'
         default: 'AUTO'
