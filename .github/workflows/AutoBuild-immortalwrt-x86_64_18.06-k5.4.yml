@@ -194,6 +194,7 @@ jobs:
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         cd openwrt
         ./scripts/feeds update -a
+        rm -rf package/feeds/packages/prometheus-node-exporter-lua
         ./scripts/feeds install -a
         
     - name: Import external feeds
