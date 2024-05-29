@@ -195,7 +195,6 @@ jobs:
         cd openwrt
         ./scripts/feeds update -a
         rm -rf package/feeds/packages/prometheus-node-exporter-lua
-        ./scripts/feeds install -a
         
     - name: Import external feeds
       working-directory: ./openwrt
@@ -206,6 +205,7 @@ jobs:
     - name: Update & Install feeds
       working-directory: ./openwrt
       run: |
+        rm -rf package/feeds/packages/prometheus-node-exporter-lua
         ./scripts/feeds install -a
 
     - name: Accelerate
