@@ -208,24 +208,22 @@ jobs:
       working-directory: ./openwrt
       run: |
         ./scripts/feeds update -a
-        rm -rf feeds/kenzo/{base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd-alt,miniupnpd-iptables,wireless-regdb}
+        rm -rf feeds/kenzo/{base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd-alt,miniupnpd-iptables,wireless-regdb,homeproxy}
         rm -rf feeds/luci/applications/luci-app-mosdns
         rm -rf feeds/luci/applications/luci-app-smartdns
         rm -rf feeds/packages/net/{alist,adguardhome,mosdns,smartdns}
         rm -rf feeds/kenzo/luci-app-adguardhome
-        rm -rf feeds/packages/prometheus-node-exporter-lua
+        rm -rf feeds/packages/{prometheus-node-exporter-lua}
         
     - name: update golang 
       working-directory: ./openwrt
       run: |
         rm -rf feeds/packages/lang/golang
         git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
-        
-               
-    - name: Update & Install feeds
+                   
+    - name: Install feeds
       working-directory: ./openwrt
       run: |
-        ./scripts/feeds update -a
         ./scripts/feeds install -a
         ./scripts/feeds install -a
 
