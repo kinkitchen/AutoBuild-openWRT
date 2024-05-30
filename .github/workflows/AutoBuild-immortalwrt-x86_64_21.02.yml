@@ -214,7 +214,6 @@ jobs:
         rm -rf feeds/luci/applications/luci-app-upnp
         rm -rf feeds/packages/net/{alist,adguardhome,mosdns,smartdns}
         rm -rf feeds/kenzo/luci-app-adguardhome
-        rm -rf feeds/packages/utils/{prometheus-node-exporter-lua}
         
     - name: update golang 
       working-directory: ./openwrt
@@ -225,6 +224,9 @@ jobs:
     - name: Install feeds
       working-directory: ./openwrt
       run: |
+        sed -i 's/ +libopenssl-legacy//g' feeds/small/shadowsocksr-libev/Makefile
+        sed -i 's/ +kmod-nft-tproxy//g' feeds/kenzo/luci-app-homeproxy/Makefile
+        sed -i 's/ +firewall4//g' feeds/kenzo/luci-app-homeproxy/Makefile
         ./scripts/feeds install -a
 
     - name: Accelerate
