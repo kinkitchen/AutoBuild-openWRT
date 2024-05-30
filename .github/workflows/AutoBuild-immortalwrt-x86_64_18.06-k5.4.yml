@@ -226,6 +226,7 @@ jobs:
     - name: Install feeds
       working-directory: ./openwrt
       run: |
+        sed -i 's/ +libopenssl-legacy//g' feeds/small/shadowsocksr-libev/Makefile
         ./scripts/feeds install -a
 
     - name: Accelerate
