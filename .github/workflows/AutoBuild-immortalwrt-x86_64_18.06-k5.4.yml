@@ -225,7 +225,6 @@ jobs:
       working-directory: ./openwrt
       run: |
         ./scripts/feeds install -a
-        ./scripts/feeds install -a
 
     - name: Accelerate
       if: env.CACHE_ACCELERATE == 'true'
@@ -260,7 +259,6 @@ jobs:
     - name: Pre-download Libraries
       run: |
         cd openwrt
-        ./scripts/feeds install -a
         make defconfig
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
