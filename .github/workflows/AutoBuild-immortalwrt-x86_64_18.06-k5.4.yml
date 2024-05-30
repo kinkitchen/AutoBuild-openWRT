@@ -211,9 +211,10 @@ jobs:
         rm -rf feeds/kenzo/{base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd-alt,miniupnpd-iptables,wireless-regdb,homeproxy}
         rm -rf feeds/luci/applications/luci-app-mosdns
         rm -rf feeds/luci/applications/luci-app-smartdns
+        rm -rf feeds/luci/applications/luci-app-upnp
         rm -rf feeds/packages/net/{alist,adguardhome,mosdns,smartdns}
         rm -rf feeds/kenzo/luci-app-adguardhome
-        rm -rf feeds/packages/{prometheus-node-exporter-lua}
+        rm -rf feeds/packages/utils/{prometheus-node-exporter-lua}
         
     - name: update golang 
       working-directory: ./openwrt
