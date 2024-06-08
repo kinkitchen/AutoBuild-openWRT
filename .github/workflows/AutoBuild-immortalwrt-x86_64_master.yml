@@ -31,6 +31,7 @@ on:
         options:
           - 'x86_64_master_fw'
           - 'x86_64_master_nofw'
+          - 'x86_64_master_fw_noupnp'
       Tempoary_FLAG:
         description: '固件标签'
         default: 'AUTO'
