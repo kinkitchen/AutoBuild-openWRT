@@ -26,10 +26,11 @@ on:
     inputs:
       Tempoary_CONFIG:
         description: '配置文件'
-        default: 'x86_64_master'
+        default: 'x86_64_master_fw'
         type: choice
         options:
-          - 'x86_64_master'
+          - 'x86_64_master_fw'
+          - 'x86_64_master_nofw'
       Tempoary_FLAG:
         description: '固件标签'
         default: 'AUTO'
