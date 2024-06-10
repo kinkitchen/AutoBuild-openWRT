@@ -26,10 +26,10 @@ on:
     inputs:
       Tempoary_CONFIG:
         description: '配置文件'
-        default: 'x86_64_lienol_2203'
+        default: 'x86_64_imtest'
         type: choice
         options:
-          - 'x86_64_lienol_2203'
+          - 'x86_64_imtest'
       Tempoary_FLAG:
         description: '固件标签'
         default: 'AUTO'
@@ -60,7 +60,7 @@ env:
 # 编译时调用的 [.config] 文件名称
   CONFIG_FILE: x86_64
 # 源码仓库:分支
-  DEFAULT_SOURCE: Lienol/openwrt:22.03
+  DEFAULT_SOURCE: immortalwrt/immortalwrt:master
 # 删除无用文件以增加编译空间
   DELETE_USELESS_FILES: true
 # 删除早期的 workflow 任务
