@@ -198,7 +198,10 @@ jobs:
         ./scripts/feeds update -a
         git clone https://github.com/sirpdboy/luci-app-partexp.git package/luci-app-partexp
         git clone https://github.com/sirpdboy/luci-app-poweroffdevice package/luci-app-poweroffdevice
-
+        git clone https://github.com/lmq8267/luci-app-vnt package/luci-app-vnt
+        git clone https://github.com/kuoruan/openwrt-frp.git package/frp
+        git clone https://github.com/lwb1978/openwrt-gecoosac package/openwrt-gecoosac
+        
     - name: update golang 
       working-directory: ./openwrt
       run: |
